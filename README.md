@@ -8,9 +8,13 @@ The UML class diagram can be found in the (https://lucid.app/lucidchart/11f1e990
 
 ## Code Implementation
 The source code are
+
 // Define the Restaurant class
+
 class Restaurant {
+
   // Static properties
+  
   static totalRestaurants = 0;
 
   // Constructor for Restaurant instances
