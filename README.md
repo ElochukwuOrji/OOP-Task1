@@ -18,70 +18,115 @@ class Restaurant {
   static totalRestaurants = 0;
 
   // Constructor for Restaurant instances
+  
   constructor(restaurantId, name) {
+  
     this.restaurantId = restaurantId; // Unique ID for the restaurant
+    
     this.name = name; // Restaurant name
+    
     Restaurant.totalRestaurants++; // Increment total restaurants
+    
     this.menu = []; // Initialize menu
+  
   }
 
   // Method to add a menu item
+  
   addMenuItem(item) {
+  
     this.menu.push(item);
+    
     console.log(`Menu item ${item} added to ${this.name}.`);
+  
   }
 
   // Method to remove a menu item
+  
   removeMenuItem(item) {
+  
     const index = this.menu.indexOf(item);
+    
     if (index > -1) {
+    
       this.menu.splice(index, 1);
+      
       console.log(`Menu item ${item} removed from ${this.name}.`);
+    
     } else {
+    
       console.log(`Menu item ${item} not found in ${this.name}.`);
+    
     }
+  
   }
+
 }
 
 // Define the Customer class
+
 class Customer {
+
   // Static property
+  
   static totalCustomers = 0;
 
   // Constructor for Customer instances
+
   constructor(customerId, name) {
+  
     this.customerId = customerId; // Unique ID for the customer
+    
     this.name = name; // Customer name
+    
     Customer.totalCustomers++; // Increment total customers
+    
     this.orderHistory = []; // Initialize order history
+  
   }
 
   // Method to place an order
+  
   placeOrder(order) {
+  
     this.orderHistory.push(order);
+    
     console.log(`${this.name} has placed an order: ${order}.`);
+  
   }
 
   // Method to view order history
+  
   viewOrderHistory() {
+  
     console.log(`${this.name}'s Order History: ${this.orderHistory.join(', ')}`);
+  
   }
+
 }
 
 // Example Usage
+
 const restaurant1 = new Restaurant("R001", "Pasta Palace");
+
 const customer1 = new Customer("C001", "Alice Smith");
 
 // Adding menu items to the restaurant
+
 restaurant1.addMenuItem("Spaghetti");
+
 restaurant1.addMenuItem("Fettuccine");
 
 // Customer actions
+
 customer1.placeOrder("Spaghetti");
+
 customer1.viewOrderHistory(); 
 
 ## Screenshots
+
 Screenshots of the code execution is
+
 Menu item Spaghetti added to Pasta Palace.
 
 Menu item Fettuccine added to Pasta Palace.
